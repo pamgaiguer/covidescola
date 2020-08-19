@@ -94,7 +94,7 @@ to setup-constants
   set interacao-escolar 3
   set dias 0
   ;; numero de pessoas na grade
-  set número-de-pessoas Como_é_o_espaço_físico_da_sua_escola?
+  set número-de-pessoas espaço_físico_da_escola
  ;; if densidade-pessoa-por-área = "P" [set número-de-pessoas 110]
   ;;if densidade-pessoa-por-área = "M" [set número-de-pessoas 210]
   ;;if densidade-pessoa-por-área = "G" [set número-de-pessoas 307]
@@ -249,13 +249,13 @@ end
 ; See Info tab for full copyright and license.
 @#$#@#$#@
 GRAPHICS-WINDOW
-351
-64
-708
-422
+225
+45
+543
+364
 -1
 -1
-9.98
+8.88
 1
 10
 1
@@ -276,10 +276,10 @@ ticks
 30.0
 
 BUTTON
-34
-74
-153
-146
+0
+45
+100
+78
 Resetar
 Setup
 NIL
@@ -293,10 +293,10 @@ NIL
 1
 
 BUTTON
-181
-75
-299
-147
+110
+45
+213
+78
 Iniciar/Parar
 go
 T
@@ -310,10 +310,10 @@ NIL
 0
 
 PLOT
-769
-117
-1194
-436
+544
+80
+929
+383
 População
 interações
 pessoas
@@ -329,10 +329,10 @@ PENS
 "imune" 1.0 0 -7500403 true "" "plot count turtles with [ immune? ]"
 
 MONITOR
-869
-61
-971
-106
+629
+30
+731
+75
 % infectados/dia
 %infectadoTotal
 1
@@ -340,10 +340,10 @@ MONITOR
 11
 
 MONITOR
-981
-62
-1079
-107
+733
+30
+831
+75
 % imunes /dia
 %immune
 1
@@ -351,10 +351,10 @@ MONITOR
 11
 
 MONITOR
-778
-62
-860
-107
+544
+30
+626
+75
 dias letivos
 dias
 1
@@ -362,10 +362,10 @@ dias
 11
 
 MONITOR
-1089
-62
-1192
-107
+833
+30
+928
+75
 % mortos (virus)
 %numero-mortos
 1
@@ -373,83 +373,83 @@ MONITOR
 11
 
 TEXTBOX
-361
-434
-733
-475
+241
+369
+541
+410
 Copyright 2020 José Paulo Guedes Pinto, Patrícia Camargo Magalhães, Carlos da Silva dos Santos [CC BY-NC-SA 3.0]
-11
+10
 0.0
 1
 
 TEXTBOX
-14
+0
 12
-349
-62
+216
+43
 1º PASSO: defina as características da sua escola! 
-15
-0.0
-1
-
-TEXTBOX
-346
-11
-791
-52
-2º PASSO: aperte Resetar e depois Iniciar/Parar
-15
-0.0
-1
-
-TEXTBOX
-757
 12
-1226
-54
+0.0
+1
+
+TEXTBOX
+227
+10
+511
+51
+2º PASSO: aperte Resetar e depois Iniciar/Parar
+12
+0.0
+1
+
+TEXTBOX
+545
+10
+865
+28
 3º PASSO: acompanhe a simulação no gráfico abaixo \n
-15
+12
 0.0
 1
 
 SWITCH
-59
-383
-270
-416
+0
+260
+215
+293
 focar-em-uma-pessoa?
 focar-em-uma-pessoa?
-1
+0
 1
 -1000
 
 CHOOSER
-37
-311
-299
-356
+0
+205
+215
+250
 regras-de-distanciamento-social
 regras-de-distanciamento-social
 "maioria respeita" "metade respeita" "minoria respeita"
 2
 
 CHOOSER
-36
-254
-298
-299
+0
+150
+215
+195
 protocolos_de_segurança_e_higiene
 protocolos_de_segurança_e_higiene
 "maioria respeita" "metade respeita" "minoria respeita"
 0
 
 SLIDER
-28
-176
-306
-209
-Como_é_o_espaço_físico_da_sua_escola?
-Como_é_o_espaço_físico_da_sua_escola?
+0
+85
+215
+118
+espaço_físico_da_escola
+espaço_físico_da_escola
 35
 400
 122.0
@@ -459,12 +459,12 @@ NIL
 HORIZONTAL
 
 TEXTBOX
-9
-214
-388
-258
- disperso<-------------->comprimido
-16
+15
+125
+205
+143
+disperso<------>comprimido
+12
 0.0
 1
 
