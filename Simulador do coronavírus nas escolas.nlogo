@@ -249,13 +249,13 @@ end
 ; See Info tab for full copyright and license.
 @#$#@#$#@
 GRAPHICS-WINDOW
-225
+235
 45
-543
-364
+573
+383
 -1
 -1
-8.88
+9.66
 1
 10
 1
@@ -273,12 +273,12 @@ GRAPHICS-WINDOW
 1
 1
 ticks
-30.0
+30
 
 BUTTON
 0
 45
-100
+110
 78
 Resetar
 Setup
@@ -293,9 +293,9 @@ NIL
 1
 
 BUTTON
-110
+113
 45
-213
+216
 78
 Iniciar/Parar
 go
@@ -310,28 +310,28 @@ NIL
 0
 
 PLOT
-544
-80
+580
+93
 929
 383
 População
 interações
 pessoas
-0.0
-10.0
-0.0
-40.0
+0
+10
+0
+40
 true
 true
 "" ""
 PENS
-"infectado" 1.0 0 -2674135 true "" "plot count turtles with [ sick? ]"
-"imune" 1.0 0 -7500403 true "" "plot count turtles with [ immune? ]"
+"infectado" 1 0 -2674135 true "" "plot count turtles with [ sick? ]"
+"imune" 1 0 -7500403 true "" "plot count turtles with [ immune? ]"
 
 MONITOR
-629
+647
 30
-731
+748
 75
 % infectados/dia
 %infectadoTotal
@@ -340,7 +340,7 @@ MONITOR
 11
 
 MONITOR
-733
+750
 30
 831
 75
@@ -351,9 +351,9 @@ MONITOR
 11
 
 MONITOR
-544
+579
 30
-626
+645
 75
 dias letivos
 dias
@@ -362,9 +362,9 @@ dias
 11
 
 MONITOR
-833
+835
 30
-928
+930
 75
 % mortos (virus)
 %numero-mortos
@@ -373,13 +373,13 @@ MONITOR
 11
 
 TEXTBOX
-241
-369
-541
-410
+250
+385
+550
+426
 Copyright 2020 José Paulo Guedes Pinto, Patrícia Camargo Magalhães, Carlos da Silva dos Santos [CC BY-NC-SA 3.0]
 10
-0.0
+0
 1
 
 TEXTBOX
@@ -389,33 +389,33 @@ TEXTBOX
 43
 1º PASSO: defina as características da sua escola! 
 12
-0.0
+0
 1
 
 TEXTBOX
-227
+240
 10
-511
+524
 51
 2º PASSO: aperte Resetar e depois Iniciar/Parar
 12
-0.0
+0
 1
 
 TEXTBOX
-545
+575
 10
-865
+895
 28
 3º PASSO: acompanhe a simulação no gráfico abaixo \n
 12
-0.0
+0
 1
 
 SWITCH
 0
 260
-215
+220
 293
 focar-em-uma-pessoa?
 focar-em-uma-pessoa?
@@ -426,7 +426,7 @@ focar-em-uma-pessoa?
 CHOOSER
 0
 205
-215
+220
 250
 regras-de-distanciamento-social
 regras-de-distanciamento-social
@@ -436,7 +436,7 @@ regras-de-distanciamento-social
 CHOOSER
 0
 150
-215
+220
 195
 protocolos_de_segurança_e_higiene
 protocolos_de_segurança_e_higiene
@@ -446,13 +446,13 @@ protocolos_de_segurança_e_higiene
 SLIDER
 0
 85
-215
+220
 118
 espaço_físico_da_escola
 espaço_físico_da_escola
 35
 400
-122.0
+122
 1
 1
 NIL
@@ -465,9 +465,8 @@ TEXTBOX
 143
 disperso<------>comprimido
 12
-0.0
+0
 1
-
 @#$#@#$#@
 ## O QUE É ISSO?
 
@@ -846,22 +845,22 @@ false
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
 @#$#@#$#@
-NetLogo 6.1.1
+NetLogo 6.1.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
 default
-0.0
--0.2 0 0.0 1.0
-0.0 1 1.0 0.0
-0.2 0 0.0 1.0
+0
+-0.2 0 0 1
+0 1 1 0
+0.2 0 0 1
 link direction
 true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
 @#$#@#$#@
-0
+
 @#$#@#$#@
