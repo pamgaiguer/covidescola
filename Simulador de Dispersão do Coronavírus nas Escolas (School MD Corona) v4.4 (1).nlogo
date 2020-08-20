@@ -476,89 +476,44 @@ A construção desse modelo foi inspirada pelo sucesso da divulgação do estudo
 Para a construção do Modelo de Dispersão do Coronavírus (MD Corona), modificamos o modelo original Vírus (Wilensky, 1998) presente na biblioteca do software livre NetLogo (Wilensky, 1999). O modelo original foi inspirado pelo artigo de Yorke et al (1979) em que biólogos ecologistas sugeriram um número de fatores que poderiam influenciar a sobrevivência de um vírus com transmissão direta entre uma população. As modificações específicas que fazem parte do MD Corona serão destacadas abaixo.
 
 ## COMO ELE FUNCIONA
-
-O modelo é iniciado com um número de pessoas (mínimo 10 e máximo 1000) distribuídas aleatoriamente num ambiente. Entre essas pessoas é possível definir o número de pessoas que estão infectadas no início. No modelo original Vírus (1998) esse último parâmetro é fixo em 10 pessoas, no MD Corona é possível escolher quantas pessoas iniciam o modelo infectadas. Outra diferença importante entre os dois modelos é a escala de tempo. No modelo original do Netlogo a escala é em semanas enquanto no MD Corona ela é em dias.
-
-As pessoas podem se mover aleatoriamente nesse mundo (o quadrado preto) estando em um dos três estados:
+Antes de iniciar as simulações o usuário pode modificar a densidade do espaço físico da escola (disperso - comprimido), a adoção das regras de distanciamento social e dos protocolos de segurança e higiene. Durante as simulações o usuário pode reiniciá-las o detê-las para modificar os parâmetros mencionados anteriormente.
+As pessoas são distribuídas e interagem aleatoriamente nesse mundo (o quadrado preto) estando em um dos três estados:
 a) saudável mas suscetível a ser contaminado pelo vírus (verde) 
 b) infectadas e transmitindo o vírus (vermelho)
 c) saudáveis e imunes (cinza)
 
-No modelo as pessoas morrem de infecção ou de idade. Quando a população cai abaixo da "capacidade máxima" do ambiente (fixa em 1000 neste modelo), pessoas saudáveis podem  produzir descendentes saudáveis (mas suscetíveis à contaminação).  
-
-Por fim, realizamos outras duas grandes inovações em relação ao modelo original: a possibilidade de parar (confinar) uma % de pessoas no ambiente; e a introdução, a cada 30 dias, de um agente infectado pelo vírus, o que acabou por tornar o ambiente do modelo aberto (antes era fechado). Essa última inovação aproxima o modelo da realidade, visto que novos surtos da pandemia voltaram a atingir a China, país que havia decretado, poucos dias atrás, o fim da quarentena
-
 ### A densidade populacional
+A densidade Populacional afeta o quão frequente pessoas infectadas, imunes e susceptíveis podem entrar em contato umas com as outras. A densidade populacional pode ser modificada através do slider  espaço_físico_da_escola.
 
-A densidade Populacional afeta o quão frequente  pessoas infectadas, imunes e suceptíveis podem entrar em contato umas com as outras. Você pode mudar o tamanho da população inicial através do slider  NUMERO-DE-PESSOAS .
+### Probabilidade de transmissão
+Com que facilidade o vírus se espalha? Alguns vírus com os quais estamos familiarizados se espalham com muita facilidade. Alguns vírus se espalham com pouco contato todas as vezes. Outros (o vírus HIV por exemplo, que é responsável pela Aids) requerem contato significativo, muitas vezes repetidas, antes da transmissão do vírus. Neste modelo, O slider protocolos_de_seguranção_e_higiene permite configurar a probabilidade de transmissão do vírus em 43%, 41% e 39% dependendo se a maioria, metade e minoria da população respeitam os protocolos de segurança e higiene.
+### Distanciamento social
+As regras de distanciamento social limitam as interações entre as pessoas ao suprimir sua movimentação a 70%, 50% e 30 % dependendo se  a maioria, metade e minoria da população respeitam essas regras. O slider regras_de_distanciamento_social modificam este parametro.
 
-### Rotatividade da população
-
-
-À medida que os indivíduos morrem, alguns que morrerem serão infectados, outros serão suscetíveis e outros serão imunes. Todos os novos indivíduos que nascerem, substituindo os que morrerem, serão saudáveis e suscetíveis. As pessoas podem morrer do vírus, cujas chances são determinadas pelo slider CHANCE-DE-RECUPERAÇÃO, ou podem morrer de velhice.
-
-Nesse modelo as pessoas morrem de velhice com 50 anos de idade. A taxa de reprodução 
-é constante. A cada iteração, se a "capacidade máxima" não tiver sido atingida, cada indivíduo saudável têm 1% de chance de se reproduzir. 
-
+### Periodo de  transmissão
+Quanto tempo uma pessoa fica infectada antes de se recuperar ou morrer? Esse período de tempo é essencialmente a janela de oportunidade do vírus para transmissão para novos hospedeiros. Neste modelo, a duração da janela de transmissão é fixa em 10 dias, o equivalente a 14 dias sem contar o final de semana, em que as escolas não abrem. Este valor foi considerado já que a OMS estabeleceu que as pessoas infectadas deveriam permanecer isoladas durante 14 dias.
 
 ### Grau de imunidade
-
 Se uma pessoa for infectada  e se recuperar, o quão imune ela estará do vírus? 
-Geralmente assumimos que a imunidade dura a vida inteira e é garantida, mas, em alguns casos, a imunidade desaparece com o tempo e a imunidade pode não ser absolutamente segura. Como no modelo original do Netlogo, a imunidade é segura, mas dura apenas um ano.
+Para algumas doenças a imunidade dura a vida inteira e é garantida, mas, em alguns casos, a imunidade desaparece com o tempo e ele pode não ser absolutamente segura. No caso do coronavirus não sabemos exatamente qual é o tempo de duração da imunidade. Após 6 meses de pandemia ainda não é comum casos de reinfecção confirmados (primeiro caso reportado no Brasil a pouco). Neste caso mantivemos como no modelo original do Netlogo,  o período de imunidade como sendo um ano.
 
-### Capacidade de transmissão
+### Interações durante o período escolar 
+Considerou-se três interações durante o período letivo (um dia), pois durante a entrada, o recesso e a saída dos estudantes acontecem a maioria das interações entre eles.  
+### Rotatividade da população
+Todos os novos indivíduos que nascerem, substituindo os que morrerem, serão saudáveis e suscetíveis. Nesse modelo as pessoas morrem por infecção ou de velhice. 
 
-Com que facilidade o vírus se espalha? Alguns vírus com os quais estamos familiarizados se espalham com muita facilidade. Alguns vírus se espalham com pouco contato todas as vezes. Outros (o vírus HIV por exemplo, que é responsável pela Aids) requerem contato significativo, muitas vezes repedidas, antes da transmissão do vírus. Neste modelo, a capacidade de transmissão é determinada pelo slider CHANCE-DE-TRASMISSÃO.
-
-### Duração da janela de transmissão
-
-Quanto tempo uma pessoa fica infectada antes de se recuperar ou morrer? Esse período de tempo é essencialmente a janela de oportunidade do vírus para transmissão para novos hospedeiros. Neste modelo, a duração da janela de transmissão é fixa em 10 dias.
-
-### Confinamento
- E se ao invéz de circular livremente as pessoas ficassem paradas no ambiente? O confinamento das pessoas em suas casas é uma das medidas sugeridas para conter a transmissão do Corona vírus.  Essa variável não está presente no modelo original "Virus" do Netlogo. No MD Corona, o número de pessoas confinadas é determinado pelo slider PORCENTAGEM-DE-CONFINADOS. Note que essa varável pode ser alterada durante a simulação (sem precisar Resetar).
-
-### Parâmetros relacionados ao código
-
-Três parâmetros importantes deste modelo são definidos como constantes no código (consulte o procedimento `inicializar-constantes`). Eles podem ser expostos como sliders, se desejado. O tempo de vida das pessoas, definidas como turtles (tartarugas) no código,  é de 75 anos (expectativa de vida no Brasil em 2020), a capacidade máxima de pessoas do mundo é de 1200 e a taxa de natalidade é de 1 em 100 chances de se reproduzir por rodada quando o número de pessoas é menor que a capacidade de máxima. No modelo original do Netlogo a duração da imunidade também é constante e fixa em 52 semanas. No MD corona a imunidade é uma variável (definida acima).
+### Parâmetros constantes
+Quatro parâmetros importantes deste modelo são definidos como constantes no código (consulte o procedimento `inicializar-constantes`). Eles podem ser expostos como sliders, se desejado. O tempo de vida das pessoas (75 anos expectativa de vida no Brasil em 2020), a capacidade máxima de pessoas na grade é de 400, a chance de recuperação uma vez contraído o vírus é 99.3%, o número inicial de pessoas infectadas é 1. 
+No  modelo um agente infectado pelo vírus  é reintroduzido a cada 30 rodadas (10 dias letivos), isto torna o ambiente do modelo aberto (antes era fechado) e aproxima o modelo à realidade de surgimento de novos surtos. 
 
 ## COMO USAR O MD CORONA
+O slider espaço_físico_das_pessoas define a densidade das escolas, onde as pessoas (35 a 400) serão aleatóriamente distribuidas no ambiente.
+O slider regras_de_distanciamento_social determina o número de pessoas que estarão aleatoriamente paradas no ambiente. 
+O slider protocolos_de_segurança_e_higiene determina a probabilidade de transmissão do vírus quando uma pessoa infectada e outra suscetível ocupar o mesmo sítio no ambiente. 
+O botão Resetar recomeça os gráficos e distribui aleatoriamente o número de pessoas no ambiente. Todas as pessoas, exceto 1, são consideradas saudáveis e suscetíveis ao vírus (pessoas verdes).  O programa fixa 1 pessoa inicialmente infectada (pessoa vermelha). Todos com idades distribuídas aleatoriamente. O botão Iniciar/Parar inicia a simulação e os gráficos e também para a simulação.
+O botão Focar_em_uma_pessoa permite focalizar no deslocamento e as interações de somente uma pessoa.
+Quatro monitores de saída mostram o número de dias electivos, porcentagem de infectados por dia, porcentagem de imunes por dia e porcentagem total de infectados. O gráfico mostra o número de pessoas infectadas (vermelho) e imunes (cinza). O eixo x do gráfico corresponde às interações realizadas por dia e o eixo y representa o número de pessoas (infectadas ou imunes dependendo da curva vermelha ou azul respectivamente).
 
-Cada "volta" representa um dia na escala de tempo deste modelo. Essa é uma importante modificação do modelo original do Netlogo em que a escala de tempo era definida em semanas.
-
-O slider NÚMERO-DE-PESSOAS define o número de pessoas entre 0 e 1200 que serão aleatóriamente distribuidas no ambiente.
-
-O slider PORCENTAGEM-DE-CONFINADOS controla o número de pessoas que estarão aleatoriamente paradas no ambiente. Ele é uma variável dinâmica, pode ser alterada durante a simulação sem precisar Resetar o simulador. 
-
-O slider CHANCE-DE-TRASMISSÃO determina a probabilidade de transmissão do vírus quando uma pessoa infectada e outra suscetível ocupar o mesmo sitio no ambiente. Por exemplo, quando o slider estiver definido como 50, o vírus se espalhará aproximadamente uma vez a cada dois encontros.
-
-O slider CHANCE-DE-RECUPERAÇÃO controla a probabilidade de uma infecção terminar em recuperação/imunidade. Quando esse controle é definido como zero, por exemplo, a infecção é sempre mortal.
-
-
-O botão RESETAR recomeça os gráficos e distribui aleatoriamente o NÚMERO-DE-PESSOAS no ambiente. Todas as pessoas, exceto 3, são consideradas saudáveis e suscetíveis ao vívus e definidas com a cor verde.  O programa fixa  3 pessoas inicialmente infectadas que são definidas pela cor vermelha. Todos com idades distribuídas aleatoriamente. O botão INICIAR/PARAR inicia a simulação e os gráficos e também para a simulação.
-
-O botão  FORMA-PESSOA-OU-BOLA controla se as pessoas são visualizadas com Fformato de círculos ou de pessoas.
-
-Três monitores de saída mostram a porcentagem da população infectada, a porcentagem imune e o número de dias que se passaram. O gráfico mostra (em suas respectivas cores) o número de pessoas sucetível, infectadas e imunes. Também mostra o número total de indivíduos na população em azul.
-
-## PARA PRESTAR ATENÇÃO 
-
-As variáveis controladas pelos sliders interagem para influenciar a probabilidade de o vírus prosperar nessa população. Observe que, em todos os casos, essas variáveis devem criar um equilíbrio no qual haja um número adequado de receptores (pessoas) em potencial disponível para o vírus e o qual o vírus possa acessar adequadamente.
-
-Freqüentemente haverá inicialmente uma explosão de infecção, já que ninguém na população é imune. Isso se aproxima do "surto" inicial de uma infecção viral em uma população, que geralmente tem conseqüências devastadoras para os seres humanos envolvidos. Logo, porém, o vírus se torna menos comum à medida que a dinâmica da população muda. O que finalmente acontece com o vírus é determinado pelas variáveis controladas pelos sliders.
-
-Observe que os vírus que são muito bem sucedidos no início (infectando quase todo mundo) podem não sobreviver a longo prazo. Como todos os infectados geralmente morrem ou se tornam imunes como resultado, o número potencial de hospedeiros é frequentemente limitado. A exceção acima é quando a variável JANELA-DE-TRANSMISSÃO é definida como sendo tão alta que a rotatividade da população (reprodução) pode acompanhar e fornecer novos hosts. 
-
-## VISUALIZAÇÃO
-
-A visualização em círculos do modelo vem das diretrizes apresentadas em
-Kornhauser, D., Wilensky, U., & Rand, W. (2009).
- http://ccl.northwestern.edu/papers/2009/Kornhauser,Wilensky&Rand_DesignGuidelinesABMViz.pdf.
-
-
-No nível básico, os impedimentos de percepção surgem quando excedemos as limitações do nosso baixo nível de sistema visual. Recursos visuais difíceis de distinguir podem desativar nossos recursos de processamento pré atentos. O processamento pré-atento podem ser dificultados por outros fenômenos cognitivos, como a interferência entre as características visuais (Healey 2006).
-
-A visualização do círculo neste modelo deve facilitar a visualização de quando os agentes interagem porque é mais fácil se sobrepor entre os círculos do que entre as formas de "pessoas". Na visualização do círculo, os círculos são mesclados para criar novas formas compostas. Assim, é mais fácil perceber novas formas compostas na visualização de círculos.
-A visualização do círculo facilita a sua visualização do que está acontecendo?
 
 ## MODELOS RELACIONADOS
 
