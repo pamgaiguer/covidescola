@@ -251,8 +251,8 @@ end
 GRAPHICS-WINDOW
 235
 45
-573
-383
+581
+392
 -1
 -1
 9.66
@@ -273,7 +273,7 @@ GRAPHICS-WINDOW
 1
 1
 ticks
-30
+30.0
 
 BUTTON
 0
@@ -317,16 +317,16 @@ PLOT
 População
 interações
 pessoas
-0
-10
-0
-40
+0.0
+10.0
+0.0
+40.0
 true
 true
 "" ""
 PENS
-"infectado" 1 0 -2674135 true "" "plot count turtles with [ sick? ]"
-"imune" 1 0 -7500403 true "" "plot count turtles with [ immune? ]"
+"infectado" 1.0 0 -2674135 true "" "plot count turtles with [ sick? ]"
+"imune" 1.0 0 -7500403 true "" "plot count turtles with [ immune? ]"
 
 MONITOR
 647
@@ -379,7 +379,7 @@ TEXTBOX
 426
 Copyright 2020 José Paulo Guedes Pinto, Patrícia Camargo Magalhães, Carlos da Silva dos Santos [CC BY-NC-SA 3.0]
 10
-0
+0.0
 1
 
 TEXTBOX
@@ -389,7 +389,7 @@ TEXTBOX
 43
 1º PASSO: defina as características da sua escola! 
 12
-0
+0.0
 1
 
 TEXTBOX
@@ -399,7 +399,7 @@ TEXTBOX
 51
 2º PASSO: aperte Resetar e depois Iniciar/Parar
 12
-0
+0.0
 1
 
 TEXTBOX
@@ -409,7 +409,7 @@ TEXTBOX
 28
 3º PASSO: acompanhe a simulação no gráfico abaixo \n
 12
-0
+0.0
 1
 
 SWITCH
@@ -452,7 +452,7 @@ espaço_físico_da_escola
 espaço_físico_da_escola
 35
 400
-122
+210.0
 1
 1
 NIL
@@ -465,8 +465,9 @@ TEXTBOX
 143
 disperso<------>comprimido
 12
-0
+0.0
 1
+
 @#$#@#$#@
 ## O QUE É ISSO?
 
@@ -845,22 +846,22 @@ false
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
 @#$#@#$#@
-NetLogo 6.1.0
+NetLogo 6.1.1
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
 default
-0
--0.2 0 0 1
-0 1 1 0
-0.2 0 0 1
+0.0
+-0.2 0 0.0 1.0
+0.0 1 1.0 0.0
+0.2 0 0.0 1.0
 link direction
 true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
 @#$#@#$#@
-
+0
 @#$#@#$#@
